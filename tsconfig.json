@@ -101,14 +101,6 @@
     // "allowUnreachableCode": true,                     /* Disable error reporting for unreachable code. */
 
     /* Completeness */
-    // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
-    "skipLibCheck": true,                                /* Skip type checking all .d.ts files. */
-    "compileOnSave": true,                               /* Enables compile on save for this project */
-    "include": [                                         /* Specifies the files which will be compiled */
-      "src/**/*"
-    ],
-    "exclude": [                                          /* Specifies the files which will be excluded from the build */
-      "node_modules"
-    ]
+     "skipDefaultLibCheck": true                      /* Skip type checking .d.ts files that are included with TypeScript. */
   }
 }
