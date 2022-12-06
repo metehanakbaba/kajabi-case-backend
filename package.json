@@ -11,6 +11,12 @@
     "prettier:check": "prettier --config .prettierrc \"./src/**/*.+(js|json|ts)\" --check --ignore-unknown",
     "prettier:write": "prettier --config .prettierrc \"./src/**/*.+(js|json|ts)\" --write --ignore-unknown"
   },
+  "lint-staged": {
+    "./src/**/*.+(ts|js)": [
+      "npm run lint",
+      "npm run prettier:check"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/metehanakbaba/kajabi-case-backend.git"
