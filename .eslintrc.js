@@ -5,6 +5,8 @@ module.exports = {
   },
   extends: [
     'airbnb-base',
+    'plugin:@typescript-eslint/recommended',
+    'prettier'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -13,7 +15,35 @@ module.exports = {
   },
   plugins: [
     '@typescript-eslint',
+    'prettier'
   ],
-  rules: {
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts']
+    },
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+        project: './tsconfig.json'
+      }
+    }
   },
-};
+  rules: {
+    '@typescript-eslint/explicit-module-boundary-types': ['error'],
+    'semi': ['error', 'never'],
+    'arrow-parens': ['error', 'as-needed'],
+    'no-trailing-spaces': 'error',
+    'import/extensions': 'off',
+    'max-len': [
+      'error',
+      {
+        'code': 100,
+        'tabWidth': 2,
+        'ignoreComments': true,
+        'ignoreStrings': true
+      }
+    ],
+    'import/no-extraneous-dependencies': ["error", { "devDependencies": true }],
+    "@typescript-eslint/no-explicit-any": "off"
+  },
+}
