@@ -1,10 +1,10 @@
 /** 3rd Packages * */
 import ModifyResponse from 'node-http-proxy-json'
-import {createProxyMiddleware, Options as ProxyOptions} from "http-proxy-middleware"
-import {Request, Response} from "http-proxy-middleware/dist/types"
-import { IncomingMessage } from "http"
+import { createProxyMiddleware, Options as ProxyOptions } from 'http-proxy-middleware'
+import { Request, Response } from 'http-proxy-middleware/dist/types'
+import { IncomingMessage } from 'http'
 /** Source * */
-import HttpStatusCode from "~/src/utils/HttpStatusCode"
+import HttpStatusCode from '~/src/utils/HttpStatusCode'
 
 /**
  * Response manipulation
@@ -13,14 +13,12 @@ import HttpStatusCode from "~/src/utils/HttpStatusCode"
  * @param req {Request} Express server request handler
  * @param res {Response} Express server response handler
  */
-function onProxyRes (proxyRes: IncomingMessage, req: Request, res: Response) {
-  ModifyResponse(res, proxyRes, body =>
-     ({
-      payload: body,
-      status: proxyRes.statusCode,
-      message: HttpStatusCode[proxyRes.statusCode as number],
-    })
-  )
+function onProxyRes(proxyRes: IncomingMessage, req: Request, res: Response) {
+  ModifyResponse(res, proxyRes, body => ({
+    payload: body,
+    status: proxyRes.statusCode,
+    message: HttpStatusCode[proxyRes.statusCode as number],
+  }))
 }
 
 const option: ProxyOptions = {
@@ -31,6 +29,5 @@ const option: ProxyOptions = {
     'User-Agent': `Kajabi-Agent/0.1 (${process.platform}; ${process.arch})`,
   },
 }
-
 
 export default createProxyMiddleware('/', option)

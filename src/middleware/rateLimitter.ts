@@ -1,4 +1,4 @@
-import rateLimit, {Options as ApiLimiterOptions} from "express-rate-limit"
+import rateLimit, { Options as ApiLimiterOptions } from 'express-rate-limit'
 
 const option: Partial<ApiLimiterOptions> = {
   windowMs: 15 * 60 * 1000, // 15 minutes
