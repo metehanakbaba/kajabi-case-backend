@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon",
-    "start": "node -r ./bootstrap.js build/server.js",
-    "build": "tsc --build tsconfig.build.json",
+    "start": "ts-node -r tsconfig-paths/register src/server.ts",
     "lint": "eslint ./src/**/*.ts",
     "prettier:check": "prettier --config .prettierrc \"./src/**/*.+(js|json|ts)\" --check --ignore-unknown",
     "prettier:write": "prettier --config .prettierrc \"./src/**/*.+(js|json|ts)\" --write --ignore-unknown"
