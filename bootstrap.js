@@ -1,7 +1,7 @@
 /**
- * If we run dev, it will execute the app.ts file in our src folder with nodemon,
+ * If we run dev, it will execute the server.ts file in our src folder with nodemon,
  * build will create a build folder in the root of our project with our compiled Typescript code,
- * and start will execute the app.js compiled file in our build folder.
+ * and start will execute the server.js compiled file in our build folder.
  */
 
 const path = require('path')
