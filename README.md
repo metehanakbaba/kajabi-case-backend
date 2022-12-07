@@ -23,4 +23,4 @@ npm run start
 
 * Twitter: [@nychisback](https://twitter.com/nychisback)
 * Github: [@metehanakbaba](https://github.com/metehanakbaba)
-* LinkedIn: [@metehanakbaba](https://linkedin.com/in/metehanakbaba)
+* LinkedIn: [@metehanakbaba](https://www.linkedin.com/in/metehan-akbaba-1a2b22173)
